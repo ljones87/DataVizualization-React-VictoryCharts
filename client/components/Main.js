@@ -3,10 +3,12 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {BrowserRouter as Router} from 'react-router-dom'
 import {Route} from 'react-router-dom'
-import { fetchStateData, fetchStateJson } from '../store'
+import { fetchStateData } from '../store'
 import App from './Chart'
-import BarGraph from  './BarGraph'
-
+import BarGraph14 from './BarGraph14'
+import BarGraph04 from './BarGraph04'
+import BarGraph94 from './BarGraph94'
+import BarGraph84 from './BarGraph84'
 
 class Main extends React.Component {
 
@@ -25,9 +27,18 @@ componentWillMount() {
     return (
       <div className="container">
 
-       <span className="stateData">
-        <BarGraph states ={states} />
-      </span>
+       <span className="2014">
+        <BarGraph14 states ={states} />
+        </span>
+         <span className="2004">
+        <BarGraph04 states ={states} />
+        </span>
+         <span className="1994">
+        <BarGraph94 states ={states} />
+        </span>
+         <span className="1984">
+        <BarGraph84 states ={states} />
+        </span>
       </div>
     )
   }
