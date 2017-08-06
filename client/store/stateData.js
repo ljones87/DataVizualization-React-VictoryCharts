@@ -12,7 +12,7 @@ const info = (state) => {
     '2004': state.data.series[0].data[10][1],
     '1994': state.data.series[0].data[20][1],
     '1984': state.data.series[0].data[30][1],
-    location: state.data.series[0].geography,
+    location: state.data.series[0].geography.slice(-2),
     units: state.data.series[0].units,
   }
 }
@@ -35,17 +35,11 @@ const getStateData = (usState) => {
 
 /* ------------       THUNK CREATORS     ------------------ */
 
+const apiStates = ['CO', 'CA', 'NY', 'MT', 'OR', 'WY', 'TX']
+
 export const fetchStateData = () => {
   return dispatch => {
-    axios.all([
-      axios.get(linkGenerator(apiKey, 'CO')),
-      axios.get(linkGenerator(apiKey, 'CA')),
-      axios.get(linkGenerator(apiKey, 'NY')),
-      axios.get(linkGenerator(apiKey, 'MT')),
-      axios.get(linkGenerator(apiKey, 'OR')),
-      axios.get(linkGenerator(apiKey, 'WY')),
-      axios.get(linkGenerator(apiKey, 'TX'))
-      ])
+    axios.all(apiStates.map(state => axios.get(linkGenerator(apiKey, state))))
       .then(axios.spread((CO, CA, NY, MT, OR, WY, TX) => {
         const states = [CO, CA, NY, MT, OR, WY, TX]
         states.forEach(state => dispatch(getStateData(info(state))))
@@ -64,3 +58,4 @@ export default function (stateData = [], action) {
       return stateData
   }
 }
+

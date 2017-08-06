@@ -9,13 +9,15 @@ class BarGraph84 extends React.Component {
 
       const {states} = this.props
       const year = "1984"
+      const categories = states.map(state => state.location)
       const coords = states.map(state => ({
-        x:[state.location.slice(-2)][0], y: Math.ceil(state[year])
+        x: state.location,
+        y: Math.ceil(state[year])
       }))
-      const categories = states.map(state => state.location.slice(-2))
+
 
       return (
-        <BarComponent categories={categories} coords={coords} />
+        <BarComponent categories={categories} coords={coords}  year={year} />
       );
   }  else {
        return <h1>Loading</h1>

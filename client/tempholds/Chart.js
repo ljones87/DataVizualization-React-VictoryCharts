@@ -1,63 +1,66 @@
-"use strict";
-
 import React from 'react';
-import ReactDOM from 'react-dom';
-import topojson from 'topojson';
-import MapBubble from './MapBubble';
+import {VictoryChart, VictoryGroup, VictoryStack, VictoryBar} from 'victory';
+
+class App extends React.Component {
+
+
+  render() {
+    if (this.props.states.length === 7) {
+      const states = this.props.states
+
+      const getBarData = () => {
+        return [1, 2, 3].map(() => {
+          return [
+            { x: new Date(1984, 1, 1), y: Math.random() },
+            { x: new Date(1994, 1, 1), y: Math.random() },
+            { x: new Date(2004, 1, 1), y: Math.random() }
+
+          ]
+        })
+      }
+
+      return (
+        <div className="container">
+          <VictoryChart domainPadding={{ x: 50 }} width={400} height={400} scale={{x: "linear"}}>
+              <VictoryGroup offset={20} style={{ data: { width: 15 } }}>
+                <VictoryStack colorScale={"red"}>
+                    <VictoryBar  data={[{x: new Date(1984, 1, 1), y: 2},]}/>;
+                </VictoryStack>
+                <VictoryStack colorScale={"green"}>
+                  {getBarData().map((data, index) => {
+                    return <VictoryBar key={index} data={data}/>;
+                  })}
+                </VictoryStack>
+                <VictoryStack colorScale={"blue"}>
+                  {getBarData().map((data, index) => {
+                    return <VictoryBar key={index} data={data}/>;
+                  })}
+                </VictoryStack>
+              </VictoryGroup>
+            </VictoryChart>
+        </div>
+      );
+    } else {return <h1>Loading</h1>}
+  }
+}
+export default App
+/*
+      { x: states['84'][0], y: Math.random() },
+          { x: states['94'][0], y: Math.random() },
+          { x: states['04'][0], y: Math.random() }
+          */
+
+            // { x: 1, y: Math.random() },
+            // { x: 2, y: Math.random() },
+            // { x: 3, y: Math.random() }
 
 
 
-// Example
-// http://bl.ocks.org/mbostock/9943478
-(function() {
-  var width = 960,
-  height = 700;
-
-
-  var us = require('json!../data/us.json');
-
-  // data should be a MultiLineString
-  var dataStates = topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; });
-  /// data should be polygon
-  var dataCounties = topojson.feature(us, us.objects.nation);
-
-  // class
-  var meshClass = 'border';
-  var polygonClass = 'land';
-
-  // domain
-  var domain = {
-    scale: 'sqrt',
-    domain: [0, 1e6],
-    range: [0, 15]
-  };
-
-  var circles = topojson.feature(us, us.objects.counties).features
-      .sort(function(a, b) { return b.properties.population - a.properties.population; })
-  var circleValue = function(d) { return +d.properties.population; };
-  var projection = 'null';
-
-  var tooltipContent = function(d) {return d.properties;}
-
-  ReactDOM.render(
-    <MapBubble
-      width= {width}
-      height= {height}
-      dataPolygon= {dataCounties}
-      polygonClass= {polygonClass}
-      dataMesh= {dataStates}
-      meshClass = {meshClass}
-      domain= {domain}
-      dataCircle= {circles}
-      circleValue= {circleValue}
-      circleClass= {'bubble'}
-      projection= {projection}
-      tooltipContent= {tooltipContent}
-      showGraticule= {false}
-      showTooltip= {true}
-      showLegend= {true}
-    />
-  , document.getElementById('map')
-  )
-
-})()
+             // return  (
+  //             <VictoryStack colorScale={"red"}>
+  //               <VictoryBar
+  //               categories={{ x: [coord.x]}}
+  //               style={{ data: { fill: "#649FE2" } }}
+  //               data={[coord]}>
+  //               </VictoryBar>
+  //             </VictoryStack>)

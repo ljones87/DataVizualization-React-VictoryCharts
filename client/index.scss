@@ -2,22 +2,28 @@
 
 
 html, body {
-   background-color:#2F4F4F;
+   background-color:whitesmoke;
    font-size: 12px;
    color: white;
    font-family: 'Gill Sans', sans-serif;
-   padding: 0;
+   padding: 10px;
 
 }
 .container {
   text-align: center;
   width: 70%;
   height: 70%;
-
+  display: inline;
 }
+.col-6 {
+  width:48.5%;
+}
+text {
+  margin: 1em;
+}
+.svg {
+  margin: 10px;
 
-.chart {
-  font-size: 5px;
 }
 .CO2 {
   margin: 10px;

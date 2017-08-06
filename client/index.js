@@ -9,7 +9,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { default as Main } from './components/Main';
+// import { default as Main } from './components/emissionsByYearAllState/Main';
+import Main from './components/Main'
 
 
 ReactDOM.render(
