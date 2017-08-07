@@ -17,7 +17,7 @@ componentWillMount() {
       return <h1>Loading</h1>
     } else {
     const states = this.props.stateData
-    const year = this.props.match.url.slice(1)
+    const year = this.props.match.path.slice(1)
     return (
       <ChartFormattingWrapper states={states} year={year} />
     )

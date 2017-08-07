@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Main = () => {
   return (
     <div >
-      <h1 >Main Page</h1>
+      <h1 >Co2 emissions by State</h1>
       <div className="link">
         <Link to='/CO'>Colorado CO emissions</Link>
       </div>

@@ -19,7 +19,7 @@ const Main = () => {
         <Link to="/2004">2004</Link>
       </div>
       <div className='link'>
-        <Link to="/2014">2004</Link>
+        <Link to="/2014">2014</Link>
       </div>
     </div>
   )

@@ -14,7 +14,7 @@ class PropsWrapper2 extends React.Component {
         return <h1>Props Loading</h1>
       } else {
         const states = this.props.stateData
-        const targetState = this.props.match.url.slice(1)
+        const targetState = this.props.match.path.slice(1)
         return (
           <ChartFormattingWrapper2 states={states} targetState={targetState} />
         )

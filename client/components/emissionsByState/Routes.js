@@ -7,8 +7,8 @@ import Main from './Main'
 const Routes =() => {
       return (
         <div className="container">
+          <Main />
           <Switch>
-            <Route exact path="/" component={Main} />
             <Route exact path="/CO" component={PropsWrapper2} />
             <Route exact path="/WY" component={PropsWrapper2} />
             <Route exact path="/MT" component={PropsWrapper2} />

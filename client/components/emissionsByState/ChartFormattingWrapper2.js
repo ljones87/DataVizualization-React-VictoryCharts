@@ -24,7 +24,9 @@ class ChartFormattingWrapper2 extends React.Component {
 
       return (
         <div>
+        <div>
           <h1>{`${targetState} Emissions Data per Decade`}</h1>
+        </div>
           <BarComponent2 categories={yearCategories} coords={coords} state={targetState}/>
         </div>
       )
