@@ -4,7 +4,7 @@ import {VictoryChart, VictoryBar, VictoryLabel, VictoryAxis} from 'victory';
 
 const BarComponent =(props) => {
      return (
-       <div className='chart col-6'>
+       <div className='chart col-8'>
         <VictoryChart height={400} width={400}
           domainPadding={{x: 30, y: [0, 10]}}
           scale={{ y:"linear"}}

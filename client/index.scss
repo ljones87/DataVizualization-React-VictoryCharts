@@ -4,7 +4,7 @@
 html, body {
    background-color:whitesmoke;
    font-size: 12px;
-   color: white;
+   color: gray;
    font-family: 'Gill Sans', sans-serif;
    padding: 10px;
 
@@ -17,97 +17,17 @@ html, body {
 }
 .col-6 {
   width:48.5%;
-}
-text {
-  margin: 1em;
-}
-.svg {
-  margin: 10px;
-
-}
-.CO2 {
-  margin: 10px;
   padding: 10px;
 }
+.col-8 {
+  width: 74%
+}
 
-.headr {
-  font-family: 'Gill Sans', sans-serif;
+.link {
   font-size: 15px;
-  margin: 10px;
-  }
-
-.stateData {
-  display: inline;
+  display:block;
+  float:left;
+  padding:10px;
 }
 
-.tooltip {
-    position: absolute;
-    text-align: center;
-    width: 100px;
-    height: 60px;
-    padding: 2px;
-    font: 15px sans-serif;
-    background: lightsteelblue;
-    border: 0px;
-    border-radius: 9px;
-    pointer-events: none;
-}
 
-.legend {
-	position:absolute;
-	left:800px;
-	top:350px;
-}
-
-.states {
-  fill: #649FE2;
-  height: 100%;
-  border: 1px;
-}
-
-.states :hover {
-   fill-opacity: .7;
-}
-
-.state-borders {
-  fill: none;
-  stroke: #70A2B2;
-  stroke-width: 1px;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  pointer-events: none;
-}
-// #3D7CAC;
-
-
-//bubble formatting//
-
-.border {
-  fill: none;
-  stroke: #fff;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-}
-
-.bubble {
-
-  fill-opacity: .3;
-  stroke: #fff;
-  stroke-width: .5px;
-  pointer-events: all;
-}
-
-circle:hover {
-  fill-opacity: .8 !important;
-}
-
-.legend circle {
-  fill: none;
-  stroke: #ccc;
-}
-
-.legend text {
-  fill: #777;
-  font: 10px sans-serif;
-  text-anchor: middle;
-}

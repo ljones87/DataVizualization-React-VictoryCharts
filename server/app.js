@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const db = require('./db');
 const app = express();
 const PORT = 2000;
 const axios = require('axios');
@@ -40,7 +39,7 @@ app.get('/data', (req, res, next) => {
 // For all GET requests that aren't to an API route,
 // we will send the index.html!
 app.get('/*', function (req, res, next) {
-  res.sendFile(path.join(__dirname, '..', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', '/public/index.html'));
 });
 
 // Handle 404s
@@ -56,15 +55,7 @@ app.use(function (err, req, res, next) {
   res.send(err.message || 'Internal server error');
 });
 
-db.sync().then(() => console.log('The database is synced'));
+
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 
 
-  // axios.get(linkGenerator(apiKey, states[0])),
-  //   axios.get(linkGenerator(apiKey, states[1])),
-  //   axios.get(linkGenerator(apiKey, states[2])),
-  //   axios.get(linkGenerator(apiKey, states[3])),
-  //   axios.get(linkGenerator(apiKey, states[4])),
-  //   axios.get(linkGenerator(apiKey, states[5])),
-  //   axios.get(linkGenerator(apiKey, states[6]))
-//

@@ -1,14 +1,14 @@
 import React from 'react';
 import BarComponent from './BarComponent'
 
-class BarGraph94 extends React.Component {
+class ChartFormattingWrapper extends React.Component {
 
 
   render() {
-    if (this.props.states.length === 7) {
+    if (this.props.states.length) {
 
       const {states} = this.props
-      const year = "1994"
+      const year = this.props.year
       const coords = states.map(state => ({
         x: state.location, y: Math.ceil(state[year])
       }))
@@ -23,4 +23,4 @@ class BarGraph94 extends React.Component {
   }
 }
 
-export default BarGraph94
+export default ChartFormattingWrapper

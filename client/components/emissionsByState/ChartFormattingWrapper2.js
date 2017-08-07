@@ -1,14 +1,13 @@
 import React from 'react';
 import BarComponent2 from './BarComponent2'
 
-class BarGraphCO extends React.Component {
-
+class ChartFormattingWrapper2 extends React.Component {
 
   render() {
-    if (this.props.states.length === 7) {
+    if (this.props.states.length) {
 
       const { states } = this.props
-      const targetState = 'CO'
+      const targetState = this.props.targetState
       const targetData = states.filter(state => state.location === targetState)[0]
       const yearCategories = Object.keys(targetData).slice(0, 4)
 
@@ -24,7 +23,10 @@ class BarGraphCO extends React.Component {
       const coords = coordGenerator(targetData)
 
       return (
-        <BarComponent2 categories={yearCategories} coords={coords} state={targetState} />
+        <div>
+          <h1>{`${targetState} Emissions Data per Decade`}</h1>
+          <BarComponent2 categories={yearCategories} coords={coords} state={targetState}/>
+        </div>
       )
     } else {
       return <h1>Loading</h1>
@@ -32,4 +34,4 @@ class BarGraphCO extends React.Component {
   }
 }
 
-export default BarGraphCO
+export default ChartFormattingWrapper2
