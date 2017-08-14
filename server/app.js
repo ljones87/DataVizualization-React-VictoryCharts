@@ -8,9 +8,23 @@ const axios = require('axios');
 const secrets = require('../secrets');
 const apiKey = secrets.apiKey;
 
+//formats api cal
 const linkGenerator = (api, state) => {
   return `http://api.eia.gov/series/?api_key=${api}&series_id=EMISS.CO2-TOTV-TT-TO-${state}.A`;
-};
+}
+
+//formats data from api call JSON
+const info = (state) => {
+  return {
+    name: state.data.series[0].name,
+    '2014': state.data.series[0].data[0][1],
+    '2004': state.data.series[0].data[10][1],
+    '1994': state.data.series[0].data[20][1],
+    '1984': state.data.series[0].data[30][1],
+    location: state.data.series[0].geography.slice(-2),
+    units: state.data.series[0].units,
+  }
+}
 // Logging middleware
 app.use(morgan('dev'));
 
@@ -23,15 +37,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // If you want to add routes, they should go here!
+
+//fill in values for API call
 const apiStates = ['CO', 'CA', 'NY', 'MT', 'OR', 'WY', 'TX']
 
+
 app.get('/data', (req, res, next) => {
-  axios.all( apiStates.map(state => axios.get(linkGenerator(apiKey, state))) )
+  axios.all(apiStates.map(state => axios.get(linkGenerator(apiKey, state))) )
     .then(axios.spread((CO, CA, NY, MT, OR, WY, TX) => {
       const states = [CO, CA, NY, MT, OR, WY, TX]
-      return states
+      return states.map(state => info(state))
     }))
-    .then(res1 => res.json(res1.states))
+    .then(formattedStates => res.json(formattedStates))
     .catch(err => console.log(err));
 });
 
