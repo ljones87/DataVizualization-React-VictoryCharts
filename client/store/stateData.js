@@ -33,6 +33,7 @@ export const fetchStateData = () => {
 export default function (stateData = [], action) {
   switch (action.type) {
     case GET_STATE_DATA:
+    console.log(action.usState)
       return  [...stateData, action.usState]
     default:
       return stateData

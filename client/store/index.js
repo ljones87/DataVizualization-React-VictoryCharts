@@ -1,10 +1,9 @@
 
-import stateData from './stateData';
-import stateJson from './stateJson';
+import stateData from './stateData'
+import stateJson from './stateJson'
 import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { createLogger } from 'redux-logger';
-import thunkMiddleware from 'redux-thunk';
-
+import { createLogger } from 'redux-logger'
+import thunkMiddleware from 'redux-thunk'
 
 const reducer = combineReducers({
   stateData,

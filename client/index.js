@@ -6,8 +6,8 @@ import { Provider } from 'react-redux';
 import {BrowserRouter as Router} from 'react-router-dom'
 import store from './store';
 
-import Routes from './components/emissionsByYear/Routes';
-//import Routes from './components/emissionsByState/Routes'
+//import Routes from './components/emissionsByYear/Routes';
+import Routes from './components/emissionsByState/Routes'
 
 
 ReactDOM.render(

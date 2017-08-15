@@ -11,7 +11,7 @@ class PropsWrapper2 extends React.Component {
 
     render() {
       if (!this.props.stateData.length === 7) {
-        return <h1>Loading</h1>
+        return <h2>Loading</h2>
       } else {
         const states = this.props.stateData
         const targetState = this.props.match.path.slice(1)
