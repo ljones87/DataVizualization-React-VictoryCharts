@@ -14,7 +14,7 @@ const BarComponent2 =(props) => {
           <VictoryBar
           categories={{ x: props.categories}}
           labels={(d) => d.y}
-          style={{ data: { fill: "#c43a31" } }}
+          style={{ data: { fill: "#c43a31" }} }
           labelComponent={<VictoryLabel dy={10} />}
           data={props.coords}
           containerComponent={<VictoryContainer responsive={true}/>}
@@ -28,7 +28,7 @@ const BarComponent2 =(props) => {
            <VictoryAxis dependentAxis
             label="million metric tons CO2"
             style={{
-              axisLabel: { padding: 40 }
+              axisLabel: { paddingLeft: 10 }
             }}
           />
         </VictoryChart>
