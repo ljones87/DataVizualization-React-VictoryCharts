@@ -1,5 +1,5 @@
 import React from 'react';
-import {VictoryChart, VictoryBar, VictoryLabel, VictoryAxis, VictoryContainer} from 'victory';
+import {VictoryChart, VictoryBar, VictoryLabel, VictoryAxis } from 'victory';
 
 
 const BarComponent =(props) => {

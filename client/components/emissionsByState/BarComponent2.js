@@ -1,11 +1,12 @@
-import React from 'react';
-import {VictoryChart, VictoryBar, VictoryLabel, VictoryAxis, VictoryContainer} from 'victory';
+import React from 'react'
+import {VictoryChart, VictoryBar, VictoryLabel, VictoryAxis, VictoryContainer} from 'victory'
 
 
 const BarComponent2 =(props) => {
      return (
-       <div className='chart col-8'>
-        <VictoryChart height={400} width={400}
+       <div className='chart'>
+        <VictoryChart
+          height={400} width={400}
           domainPadding={{x: 40, y: 40}}
           scale={{ y:"linear"}}
           style={{ height: 50, width: 50}}
@@ -28,7 +29,7 @@ const BarComponent2 =(props) => {
            <VictoryAxis dependentAxis
             label="million metric tons CO2"
             style={{
-              axisLabel: { paddingLeft: 10 }
+              axisLabel: { padding: 40 }
             }}
           />
         </VictoryChart>

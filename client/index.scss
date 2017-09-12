@@ -13,22 +13,26 @@ html, body {
   text-align: center;
   width: 100%;
   height: 70%;
-  display: inline;
+  display: inline-block;
+  padding: 20;
 }
-.col-6 {
-  width:48.5%;
+.col-3 {
+  width:33.5%;
   padding: 10px;
-}
-.col-8 {
-  width: 74%
+  float: left;
 }
 
+.title {
+  text-align: center
+}
 .link {
   font-size: 15px;
   text-align: center;
-  display:inline-block;
   padding:10px;
-
 }
 
+.chartArea {
+  float: left;
+  width: 60%;
 
+}
