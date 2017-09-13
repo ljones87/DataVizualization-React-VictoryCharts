@@ -7,6 +7,6 @@ To start using me, here's what you'll have to do:
 * `npm install`
 * `npm start`
 
-I am still working out the kinks of displaying the graphs between the States and Years. Feel free to fork, clone, npm install & start to see current progress, but switching between year and state graphs does not currently work (the graph area will display  "Loading")
+Feel free to fork, clone, npm install & start to see current progress
 
 The start script runs webpack in watch mode, and nodemon, so any changes you make to the client or server directories should cause webpack to rebuild and the server to restart, respectively.

@@ -8,7 +8,7 @@ const BarComponent2 =(props) => {
      return (
        <div className='chart'>
         <VictoryChart
-          height={400} width={420}
+          height={400} width={400}
           domainPadding={{x: 40, y: 40}}
           scale={{ y: "linear" }}
           style={{ height: 50, width: 50}}

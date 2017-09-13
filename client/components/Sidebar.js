@@ -1,10 +1,9 @@
 import React from 'react'
 import StateLinkGenerator from './StateLinkGenerator'
 import YearLinkGenerator from './YearLinkGenerator'
+import { states, years } from '../displayData'
 
 const Sidebar = () => {
-  const states = ['CO', 'CA', 'NY', 'MT', 'OR', 'WY', 'TX']
-  const years = ['1984', '1994', '2004', '2014']
   return (
     <div className="col-3">
       <h2>Co2 emissions by state</h2>

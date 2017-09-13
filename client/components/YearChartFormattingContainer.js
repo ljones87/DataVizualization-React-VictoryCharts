@@ -1,7 +1,7 @@
 import React from 'react';
-import BarComponent from '../BarComponent'
+import BarComponent from './BarComponent'
 
-const YearChartFormattingWrapper = (props) => {
+const YearChartFormattingContainer  = (props) => {
     if (props.states.length >= 7) {
       const { states, year } = props
 
@@ -12,7 +12,7 @@ const YearChartFormattingWrapper = (props) => {
       const categories = states.map(state => state.location)
 
       return (
-        <div>
+        <div className="chartArea">
           <h2 className="title">{`Emissions Data by year`}</h2>
           <BarComponent
             categories={categories}
@@ -25,4 +25,4 @@ const YearChartFormattingWrapper = (props) => {
   }
 }
 
-export default YearChartFormattingWrapper
+export default YearChartFormattingContainer

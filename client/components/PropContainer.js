@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { fetchStateData } from '../store'
-import YearPropsWrapper from './emissionsByYear/YearPropsWrapper'
-import StatePropsWrapper from './emissionsByState/StatePropsWrapper'
+import YearChartFormattingContainer from './YearChartFormattingContainer'
+import StateChartFormattingContainer from './StateChartFormattingContainer'
 
 class PropsRetreiver extends React.Component {
 
@@ -16,8 +16,12 @@ class PropsRetreiver extends React.Component {
 
       if (states.length) {
         return pathInfo.length > 2 ?
-          (<YearPropsWrapper states={states} year={pathInfo} />)
-        : (<StatePropsWrapper states ={states} targetState={pathInfo} />)
+          (<div className="chartArea">
+            <YearChartFormattingContainer states={states} year={pathInfo} />
+          </div>)
+        : (<div className="chartArea">
+        <StateChartFormattingContainer states ={states} targetState={pathInfo} />
+        </div>)
     } else {
       return <h1>Loading</h1>
     }
