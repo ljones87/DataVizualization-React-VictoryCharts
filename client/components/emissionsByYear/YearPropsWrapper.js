@@ -12,10 +12,10 @@ const YearPropsWrapper = (props) => {
         <YearChartFormattingWrapper states={states} year={year} />
       </div>
     )
-  } else {
+    } else {
     return <h1> Loading </h1>
-  }
-  }
+    }
+}
 
 
 

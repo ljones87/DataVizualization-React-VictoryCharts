@@ -18,10 +18,11 @@ const BarComponent2 =(props) => {
           style={{ data: { fill: "#c43a31" }} }
           labelComponent={<VictoryLabel dy={10} />}
           data={props.coords}
-          containerComponent={<VictoryContainer responsive={true}/>}
+          domain={{ y: [0, 600] }}
+          // containerComponent={<VictoryContainer responsive={true}/>}
           />
           <VictoryAxis
-            label={ props.state + " emissions over 40 years"}
+            label={ props.state + " emissions over 30 years"}
             style={{
               axisLabel: { padding: 30 }
             }}
