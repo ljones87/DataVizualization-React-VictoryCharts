@@ -7,7 +7,7 @@ const Sidebar = () => {
   const years = ['1984', '1994', '2004', '2014']
   return (
     <div className="col-3">
-      <h2>Co2 emissions by State</h2>
+      <h2>Co2 emissions by state</h2>
        {states.map(state => <StateLinkGenerator key={state} state={state} />)}
       <div >
       <hr />

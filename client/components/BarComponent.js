@@ -1,26 +1,29 @@
-import React from 'react';
-import {VictoryChart, VictoryBar, VictoryLabel, VictoryAxis } from 'victory';
+import React from 'react'
+import {VictoryChart, VictoryBar, VictoryLabel, VictoryAxis} from 'victory'
 
 
-const BarComponent =(props) => {
+const BarComponent2 =(props) => {
+  const xLabel = props.state ? `${props.state} emissions over 30 years`
+  : `sample state emissions ${props.year}`
      return (
-       <div className='chart col-8'>
-        <VictoryChart height={400} width={400}
+       <div className='chart'>
+        <VictoryChart
+          height={400} width={420}
           domainPadding={{x: 40, y: 40}}
-          scale={{ y:"linear"}}
+          scale={{ y: "linear" }}
           style={{ height: 50, width: 50}}
           size={10}
         >
           <VictoryBar
           categories={{ x: props.categories}}
           labels={(d) => d.y}
-          style={{ data: { fill: "#c43a31" } }}
+          style={{ data: { fill: "#c43a31" }} }
           labelComponent={<VictoryLabel dy={10} />}
           data={props.coords}
-          domain={{ y: [100, 700] }}
+          domain={{ y: [0, 600] }}
           />
           <VictoryAxis
-            label={"state emissions " + props.year}
+            label={ xLabel }
             style={{
               axisLabel: { padding: 30 }
             }}
@@ -28,7 +31,7 @@ const BarComponent =(props) => {
            <VictoryAxis dependentAxis
             label="million metric tons CO2"
             style={{
-              axisLabel: { padding: 40 }
+              axisLabel: { padding: 38 }
             }}
           />
         </VictoryChart>
@@ -36,4 +39,4 @@ const BarComponent =(props) => {
     )
 }
 
-export default BarComponent
+export default BarComponent2

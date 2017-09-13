@@ -1,11 +1,11 @@
 import React from 'react';
-import BarComponent from './BarComponent'
+import BarComponent from '../BarComponent'
 
 const YearChartFormattingWrapper = (props) => {
     if (props.states.length >= 7) {
-      const { states, year} = props
+      const { states, year } = props
 
-      //adds state and co emissions to x/y coordinates
+      //maps over states returning array of x coords being states and y cords being emissions data rounded up
       const coords = states.map(state => ({
         x: state.location, y: Math.ceil(state[year])
       }))

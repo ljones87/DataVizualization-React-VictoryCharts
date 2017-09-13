@@ -17,9 +17,10 @@ html, body {
   padding: 20;
 }
 .col-3 {
-  width:33.5%;
+  width:25%;
   padding: 10px;
   float: left;
+  border-right: black;
 }
 
 .title {
@@ -33,7 +34,7 @@ html, body {
 
 .chartArea {
   float: left;
-  width: 60%;
-  padding-left: 3em;
+  width: 65%;
+  padding-left: 6em;
 
 }
