@@ -6,6 +6,7 @@ const app = express();
 const PORT = 2000;
 const axios = require('axios');
 //const secrets = require('../secrets');
+if (process.env.NODE_ENV !== 'production') require('../secrets')
 const apiKey = process.env.API_KEY
 
 //formats api cal
