@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = 2000;
 const axios = require('axios');
-//const secrets = require('../secrets');
 if (process.env.NODE_ENV !== 'production') require('../secrets')
 const apiKey = process.env.API_KEY
 
@@ -14,14 +13,16 @@ const linkGenerator = (api, state) => {
   return `http://api.eia.gov/series/?api_key=${api}&series_id=EMISS.CO2-TOTV-TT-TO-${state}.A`;
 }
 
+const yearData = (state, index) => state.data.series[0].data[index][1]
+
 //formats data from api call JSON
 const info = (state) => {
   return {
     name: state.data.series[0].name,
-    '2014': state.data.series[0].data[0][1],
-    '2004': state.data.series[0].data[10][1],
-    '1994': state.data.series[0].data[20][1],
-    '1984': state.data.series[0].data[30][1],
+    '2014': yearData(state, 0),
+    '2004': yearData(state, 10),
+    '1994': yearData(state, 20),
+    '1984': yearData(state, 30),
     location: state.data.series[0].geography.slice(-2),
     units: state.data.series[0].units,
   }
@@ -36,8 +37,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Static middleware
 app.use(express.static(path.join(__dirname, '..', 'public')));
-
-// If you want to add routes, they should go here!
 
 //fill in values for API call
 const apiStates = ['CO', 'CA', 'NY', 'MT', 'OR', 'WY', 'TX']
