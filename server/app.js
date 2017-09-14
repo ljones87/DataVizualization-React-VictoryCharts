@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = 2000;
 const axios = require('axios');
-const secrets = require('../secrets');
-const apiKey = secrets.apiKey;
+//const secrets = require('../secrets');
+const apiKey = process.env.API_KEY
 
 //formats api cal
 const linkGenerator = (api, state) => {
