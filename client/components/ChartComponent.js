@@ -20,7 +20,6 @@ const BarComponent2 =(props) => {
           style={{ data: { fill: "#c43a31" }} }
           labelComponent={<VictoryLabel dy={10} />}
           data={props.coords}
-          domain={{ y: [0, 600] }}
           />
           <VictoryAxis
             label={ xLabel }

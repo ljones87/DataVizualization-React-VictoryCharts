@@ -17,8 +17,8 @@ html, body {
   padding: 20;
 }
 .col-3 {
-  width:25%;
-  padding: 10px;
+  width:20%;
+  padding: 5px;
   float: left;
   border-right: black;
 }
@@ -32,14 +32,19 @@ html, body {
   padding:10px;
 }
 
-.chartArea {
+@mixin chartArea () {
   float: left;
-  width: 65%;
-  padding-left: 6em;
-  .intro {
-    text-align: center;
-    margin: 3em;
+  width: 60%;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+.chart {
+  @include chartArea();
+}
 
-  }
+.intro {
+  @include chartArea();
 
 }
+
+

@@ -5,7 +5,8 @@ const Home = (props) => {
   return (
     <div className='intro'>
      <h2>
-      Hello! Welcome to my Data Visualizations hackathon. This was put together in about 18 hours so I apologize if it's still a bit rough.
+      Hello! Welcome to my Data Visualizations hackathon project. I originally built this in about 18 hours so is not my best work, but I'll slowly be adding styling and features (like maybe all the states!) for fun in my free time. Feel free to click around until then!
+      If you have a project in mind let me know! I love working in react and react native and would love to collaborate: lina.jones630@gmail.com
       </h2>
     </div>
   )
