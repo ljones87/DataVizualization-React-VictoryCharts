@@ -6,7 +6,7 @@ import StateChartFormattingContainer from './StateChartFormattingContainer'
 
 class PropsRetreiver extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchDataThunk()
   }
 
@@ -14,7 +14,7 @@ class PropsRetreiver extends React.Component {
       const states = this.props.stateData
       const pathInfo = this.props.match.path.slice(1)
 
-      if (states.length === 7) {
+      if (states.length) {
         return pathInfo.length > 2 ?
           (<div className="chartArea">
             <YearChartFormattingContainer states={states} year={pathInfo} />
