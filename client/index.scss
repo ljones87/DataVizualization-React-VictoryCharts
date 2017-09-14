@@ -34,12 +34,14 @@ html, body {
 
 @mixin chartArea () {
   float: left;
-  width: 60%;
+  width: 65%;
   padding-left: 3em;
   padding-right: 3em;
 }
-.chart {
+.chartArea {
   @include chartArea();
+  padding-left: 3em;
+
 }
 
 .intro {

@@ -22035,7 +22035,7 @@ var _victory = __webpack_require__(577);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var BarComponent2 = function BarComponent2(props) {
+var ChartComponent = function ChartComponent(props) {
   var xLabel = props.state ? props.state + ' emissions over 30 years' : 'sample state emissions ' + props.year;
   return _react2.default.createElement(
     'div',
@@ -22074,7 +22074,7 @@ var BarComponent2 = function BarComponent2(props) {
   );
 };
 
-exports.default = BarComponent2;
+exports.default = ChartComponent;
 
 /***/ }),
 /* 268 */
@@ -30882,7 +30882,7 @@ exports = module.exports = __webpack_require__(399)(undefined);
 
 
 // module
-exports.push([module.i, "html, body {\n  background-color: whitesmoke;\n  font-size: 12px;\n  color: gray;\n  font-family: 'Veranda', sans-serif;\n  padding: 10px; }\n\n.container {\n  text-align: center;\n  width: 100%;\n  height: 70%;\n  display: inline-block;\n  padding: 20; }\n\n.col-3 {\n  width: 20%;\n  padding: 5px;\n  float: left;\n  border-right: black; }\n\n.title {\n  text-align: center; }\n\n.link {\n  font-size: 15px;\n  text-align: center;\n  padding: 10px; }\n\n.chart {\n  float: left;\n  width: 60%;\n  padding-left: 3em;\n  padding-right: 3em; }\n\n.intro {\n  float: left;\n  width: 60%;\n  padding-left: 3em;\n  padding-right: 3em; }\n", ""]);
+exports.push([module.i, "html, body {\n  background-color: whitesmoke;\n  font-size: 12px;\n  color: gray;\n  font-family: 'Veranda', sans-serif;\n  padding: 10px; }\n\n.container {\n  text-align: center;\n  width: 100%;\n  height: 70%;\n  display: inline-block;\n  padding: 20; }\n\n.col-3 {\n  width: 20%;\n  padding: 5px;\n  float: left;\n  border-right: black; }\n\n.title {\n  text-align: center; }\n\n.link {\n  font-size: 15px;\n  text-align: center;\n  padding: 10px; }\n\n.chartArea {\n  float: left;\n  width: 65%;\n  padding-left: 3em;\n  padding-right: 3em;\n  padding-left: 3em; }\n\n.intro {\n  float: left;\n  width: 65%;\n  padding-left: 3em;\n  padding-right: 3em; }\n", ""]);
 
 // exports
 

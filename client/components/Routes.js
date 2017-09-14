@@ -1,13 +1,13 @@
 
-import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import PropContainer from './PropContainer'
-import Sidebar from './Sidebar'
-import { years, states } from '../displayData'
-import Home from './Home'
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import PropContainer from './PropContainer';
+import Sidebar from './Sidebar';
+import { years, states } from '../displayData';
+import Home from './Home';
 
 const Routes = () => {
-  const routeData = years.concat(states)
+  const routeData = years.concat(states);
   return (
     <div className="container">
       <Sidebar />
@@ -26,9 +26,9 @@ const Routes = () => {
         <Route exact path='/' component={Home} />
       </Switch>
     </div>
-  )
-}
+  );
+};
 
 
-export default Routes
+export default Routes;
 
