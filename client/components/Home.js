@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 
 const Home = (props) => {
@@ -9,7 +9,7 @@ const Home = (props) => {
       If you have a project in mind let me know! I love working in react and react native and would love to collaborate: lina.jones630@gmail.com
       </h2>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

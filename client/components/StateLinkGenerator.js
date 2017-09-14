@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const StateLinkGenerator = (props) => {
@@ -7,7 +7,7 @@ const StateLinkGenerator = (props) => {
     <div className="link">
       <Link to={`/${props.state}`}>{props.state} Emissions History</Link>
     </div>
-  )
-}
+  );
+};
 
-export default StateLinkGenerator
+export default StateLinkGenerator;

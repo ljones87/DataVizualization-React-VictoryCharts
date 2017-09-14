@@ -1,7 +1,7 @@
-import React from 'react'
-import StateLinkGenerator from './StateLinkGenerator'
-import YearLinkGenerator from './YearLinkGenerator'
-import { states, years } from '../displayData'
+import React from 'react';
+import StateLinkGenerator from './StateLinkGenerator';
+import YearLinkGenerator from './YearLinkGenerator';
+import { states, years } from '../displayData';
 
 const Sidebar = () => {
   return (
@@ -14,9 +14,9 @@ const Sidebar = () => {
       </div>
        {years.map(year => <YearLinkGenerator key={year} year={year} />)}
     </div>
-  )
-}
+  );
+};
 
 
-export default Sidebar
+export default Sidebar;
 

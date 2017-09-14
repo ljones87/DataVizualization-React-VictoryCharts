@@ -1,15 +1,15 @@
 import React from 'react';
-import ChartComponent from './ChartComponent'
+import ChartComponent from './ChartComponent';
 
 const YearChartFormattingContainer  = (props) => {
     if (props.states.length >= 7) {
-      const { states, year } = props
+      const { states, year } = props;
 
       //maps over states returning array of x coords being states and y cords being emissions data rounded up
       const coords = states.map(state => ({
         x: state.location, y: Math.ceil(state[year])
-      }))
-      const categories = states.map(state => state.location)
+      }));
+      const categories = states.map(state => state.location);
 
       return (
         <div className="chartArea">
@@ -21,8 +21,8 @@ const YearChartFormattingContainer  = (props) => {
         </div>
       );
   } else {
-    return <h1>Loading</h1>
+    return <h1>Loading</h1>;
   }
-}
+};
 
-export default YearChartFormattingContainer
+export default YearChartFormattingContainer;

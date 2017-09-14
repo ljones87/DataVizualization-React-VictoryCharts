@@ -1,18 +1,18 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { fetchStateData } from '../store'
-import YearChartFormattingContainer from './YearChartFormattingContainer'
-import StateChartFormattingContainer from './StateChartFormattingContainer'
+import React from 'react';
+import { connect } from 'react-redux';
+import { fetchStateData } from '../store';
+import YearChartFormattingContainer from './YearChartFormattingContainer';
+import StateChartFormattingContainer from './StateChartFormattingContainer';
 
 class PropsRetreiver extends React.Component {
 
   componentDidMount() {
-    this.props.fetchDataThunk()
+    this.props.fetchDataThunk();
   }
 
     render () {
-      const states = this.props.stateData
-      const pathInfo = this.props.match.path.slice(1)
+      const states = this.props.stateData;
+      const pathInfo = this.props.match.path.slice(1);
 
       if (states.length) {
         return pathInfo.length > 2 ?
@@ -21,9 +21,9 @@ class PropsRetreiver extends React.Component {
           </div>)
         : (<div className="chartArea">
            <StateChartFormattingContainer states={states} targetState={pathInfo} />
-           </div>)
+           </div>);
     } else {
-      return <h1>Loading</h1>
+      return <h1>Loading</h1>;
     }
     }
   }
@@ -31,16 +31,16 @@ class PropsRetreiver extends React.Component {
   const mapState = (state) => {
     return {
      stateData: state.stateData
-    }
-  }
+    };
+  };
 
   const mapDispatch = (dispatch) => {
     return {
       fetchDataThunk() {
-        dispatch(fetchStateData())
+        dispatch(fetchStateData());
       }
-    }
-  }
+    };
+  };
 
 
-  export default connect(mapState, mapDispatch)(PropsRetreiver)
+  export default connect(mapState, mapDispatch)(PropsRetreiver);

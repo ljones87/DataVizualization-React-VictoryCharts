@@ -1,10 +1,10 @@
-import React from 'react'
-import {VictoryChart, VictoryBar, VictoryLabel, VictoryAxis} from 'victory'
+import React from 'react';
+import {VictoryChart, VictoryBar, VictoryLabel, VictoryAxis} from 'victory';
 
 
-const BarComponent2 =(props) => {
+const ChartComponent =(props) => {
   const xLabel = props.state ? `${props.state} emissions over 30 years`
-  : `sample state emissions ${props.year}`
+  : `sample state emissions ${props.year}`;
      return (
        <div className='chart'>
         <VictoryChart
@@ -35,7 +35,7 @@ const BarComponent2 =(props) => {
           />
         </VictoryChart>
       </div>
-    )
-}
+    );
+};
 
-export default BarComponent2
+export default ChartComponent;
