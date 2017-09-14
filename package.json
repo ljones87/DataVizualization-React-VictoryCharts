@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "webpack -w & nodemon server/app.js",
-    "deploy": "webpack -p && git add -f public/bundle.js public/bundle.js.map && git commit --allow-empty -m 'Deploying' && git push heroku deploy:master"
+    "deploy": "git pull heroku master && webpack -p && git add -f public/bundle.js public/bundle.js.map && git commit --allow-empty -m 'Deploying' && git push heroku deploy:master"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
