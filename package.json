@@ -2,6 +2,9 @@
   "name": "simple-starter",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": ">= 7.0.0"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^0.16.2",
