@@ -14,14 +14,14 @@ class PropsRetreiver extends React.Component {
       const states = this.props.stateData
       const pathInfo = this.props.match.path.slice(1)
 
-      if (states.length) {
+      if (states.length === 7) {
         return pathInfo.length > 2 ?
           (<div className="chartArea">
             <YearChartFormattingContainer states={states} year={pathInfo} />
           </div>)
         : (<div className="chartArea">
-        <StateChartFormattingContainer states ={states} targetState={pathInfo} />
-        </div>)
+           <StateChartFormattingContainer states={states} targetState={pathInfo} />
+           </div>)
     } else {
       return <h1>Loading</h1>
     }

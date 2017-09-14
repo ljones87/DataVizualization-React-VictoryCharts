@@ -1,5 +1,5 @@
 import React from 'react';
-import BarComponent from './BarComponent';
+import ChartComponent from './ChartComponent';
 import  { coordGenerator } from '../graphFunctions';
 
 const StateChartFormattingContainer = (props) => {
@@ -14,7 +14,7 @@ const StateChartFormattingContainer = (props) => {
 
           <h2 className="title">{`${targetState} Emissions Data per Decade`}</h2>
 
-          <BarComponent categories={yearCategories} coords={coords} state={targetState} />
+          <ChartComponent categories={yearCategories} coords={coords} state={targetState} />
         </div>
       );
     } else  { return <h1>Loading</h1>; }

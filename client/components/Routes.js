@@ -12,7 +12,7 @@ const Routes =() => {
         <div className="container">
           <Sidebar />
           <Switch>
-            {routeData.map(year =>
+            {years.map(year =>
             <Route
             exact path={`/${year}`}
             component={PropContainer}

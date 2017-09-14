@@ -1,5 +1,5 @@
 import React from 'react';
-import BarComponent from './BarComponent'
+import ChartComponent from './ChartComponent'
 
 const YearChartFormattingContainer  = (props) => {
     if (props.states.length >= 7) {
@@ -14,7 +14,7 @@ const YearChartFormattingContainer  = (props) => {
       return (
         <div className="chartArea">
           <h2 className="title">{`Emissions Data by year`}</h2>
-          <BarComponent
+          <ChartComponent
             categories={categories}
             coords={coords}
             year={year} />
