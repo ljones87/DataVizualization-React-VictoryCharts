@@ -24,7 +24,7 @@
     "victory": "^0.21.3"
   },
   "scripts": {
-    "start": "webpack -w & nodemon server/app.js",
+    "start": "webpack -w & node server/app.js",
     "deploy": "git pull heroku master && webpack -p && git add -f public/bundle.js && git commit --allow-empty -m 'Deploying' && git push heroku deploy:master"
   },
   "devDependencies": {
