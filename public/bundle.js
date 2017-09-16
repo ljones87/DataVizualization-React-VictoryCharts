@@ -30882,7 +30882,7 @@ exports = module.exports = __webpack_require__(399)(undefined);
 
 
 // module
-exports.push([module.i, "html, body {\n  background-color: whitesmoke;\n  font-size: 12px;\n  color: gray;\n  font-family: 'Veranda', sans-serif;\n  padding: 10px; }\n\n.container {\n  text-align: center;\n  width: 100%;\n  height: 70%;\n  display: inline-block;\n  padding: 20; }\n\n.col-3 {\n  width: 20%;\n  padding: 5px;\n  float: left;\n  border-right: black; }\n\n.title {\n  text-align: center; }\n\n.link {\n  font-size: 15px;\n  text-align: center;\n  padding: 10px; }\n\n.chartArea {\n  float: left;\n  width: 65%;\n  padding-left: 3em;\n  padding-right: 3em;\n  padding-left: 3em; }\n\n.intro {\n  float: left;\n  width: 65%;\n  padding-left: 3em;\n  padding-right: 3em; }\n", ""]);
+exports.push([module.i, "html, body {\n  background-color: whitesmoke;\n  font-size: 12px;\n  color: gray;\n  font-family: 'Veranda', sans-serif;\n  padding: 10px; }\n\n.container {\n  text-align: center;\n  width: 100%;\n  height: 70%;\n  display: inline-block;\n  padding: 20; }\n\n.col-3 {\n  width: 20%;\n  padding: 5px;\n  float: left;\n  border-right: black; }\n\n.title {\n  text-align: center; }\n\n.link {\n  font-size: 15px;\n  text-align: center;\n  padding: 10px; }\n\n.chartArea {\n  float: left;\n  width: 65%;\n  padding-left: 6em;\n  padding-right: 3em; }\n\n.intro {\n  float: left;\n  width: 65%;\n  padding-left: 6em;\n  padding-right: 3em; }\n", ""]);
 
 // exports
 
