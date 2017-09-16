@@ -11,13 +11,14 @@ const StateChartFormattingContainer = (props) => {
 
       return (
         <div className="chartArea">
-
           <h2 className="title">{`${targetState} Emissions Data per Decade`}</h2>
-
-          <ChartComponent categories={yearCategories} coords={coords} state={targetState} />
+          <ChartComponent
+          categories={yearCategories}
+          coords={coords}
+          state={targetState} />
         </div>
       );
-    } else  { return <h1>Loading</h1>; }
+    } else { return <h1>Loading</h1>; }
   };
 
 
