@@ -8,11 +8,13 @@ if (process.env.NODE_ENV !== 'production') require('../secrets')
 const apiKey = process.env.API_KEY
 const PORT = process.env.PORT || 2000
 
-//formats api cal
+//formats api call
 const linkGenerator = (api, state) => {
   return `http://api.eia.gov/series/?api_key=${api}&series_id=EMISS.CO2-TOTV-TT-TO-${state}.A`;
 }
 
+//returns data by year specified by index
+// years start at 1980 (index 34) up to 2014 (index 0)
 const yearData = (state, index) => state.data.series[0].data[index][1]
 
 //formats data from api call JSON
