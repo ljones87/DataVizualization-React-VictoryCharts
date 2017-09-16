@@ -24,7 +24,7 @@
     "victory": "^0.21.3"
   },
   "scripts": {
-    "start": "node server",
+    "start": "node server/app.js",
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
     "start-dev": "npm run build-client-watch",

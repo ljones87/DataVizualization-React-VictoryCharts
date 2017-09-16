@@ -3,7 +3,7 @@ const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const app = express();
-const PORT = 2000;
+const port = process.env.PORT || 2000
 const axios = require('axios');
 if (process.env.NODE_ENV !== 'production') require('../secrets')
 const apiKey = process.env.API_KEY
