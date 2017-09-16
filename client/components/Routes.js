@@ -5,11 +5,13 @@ import PropContainer from './PropContainer';
 import Sidebar from './Sidebar';
 import { years, states } from '../displayData';
 import Home from './Home';
+import Header from './Header';
 
 const Routes = () => {
   const routeData = years.concat(states);
   return (
     <div className="container">
+      <Header />
       <Sidebar />
       <Switch>
         <Route exact path="/1984" component={PropContainer} />

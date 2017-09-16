@@ -30882,7 +30882,7 @@ exports = module.exports = __webpack_require__(399)(undefined);
 
 
 // module
-exports.push([module.i, "html, body {\n  background-color: whitesmoke;\n  font-size: 12px;\n  color: gray;\n  font-family: 'Veranda', sans-serif;\n  padding: 10px; }\n\n.container {\n  text-align: center;\n  width: 100%;\n  height: 70%;\n  display: inline-block;\n  padding: 20; }\n\n.col-3 {\n  width: 20%;\n  padding: 5px;\n  float: left;\n  border-right: black; }\n\n.title {\n  text-align: center; }\n\n.link {\n  font-size: 15px;\n  text-align: center;\n  padding: 10px; }\n\n.chartArea {\n  float: left;\n  width: 65%;\n  padding-left: 6em;\n  padding-right: 3em; }\n\n.intro {\n  float: left;\n  width: 65%;\n  padding-left: 6em;\n  padding-right: 3em; }\n", ""]);
+exports.push([module.i, "html, body {\n  background-color: whitesmoke;\n  font-size: 12px;\n  color: gray;\n  font-family: 'Veranda', sans-serif;\n  padding: 10px; }\n\n.container {\n  text-align: center;\n  width: 100%;\n  height: 70%;\n  display: inline-block;\n  padding: 20; }\n\n.col-3 {\n  width: 20%;\n  padding: 5px;\n  float: left;\n  border-right: black; }\n\n.title {\n  text-align: center; }\n\n.link {\n  font-size: 15px;\n  text-align: center;\n  padding: 10px; }\n\n.chartArea {\n  float: left;\n  width: 65%;\n  padding-left: 6em;\n  padding-right: 3em; }\n\n.intro {\n  float: left;\n  width: 65%;\n  padding-left: 6em;\n  padding-right: 3em; }\n\n.header {\n  height: 10%;\n  width: 100%;\n  border-bottom-color: black; }\n", ""]);
 
 // exports
 
@@ -48070,6 +48070,10 @@ var _Home = __webpack_require__(896);
 
 var _Home2 = _interopRequireDefault(_Home);
 
+var _Header = __webpack_require__(897);
+
+var _Header2 = _interopRequireDefault(_Header);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Routes = function Routes() {
@@ -48077,6 +48081,7 @@ var Routes = function Routes() {
   return _react2.default.createElement(
     'div',
     { className: 'container' },
+    _react2.default.createElement(_Header2.default, null),
     _react2.default.createElement(_Sidebar2.default, null),
     _react2.default.createElement(
       _reactRouterDom.Switch,
@@ -67133,7 +67138,10 @@ var StateChartFormattingContainer = function StateChartFormattingContainer(props
         { className: 'title' },
         targetState + ' Emissions Data per Decade'
       ),
-      _react2.default.createElement(_ChartComponent2.default, { categories: yearCategories, coords: coords, state: targetState })
+      _react2.default.createElement(_ChartComponent2.default, {
+        categories: yearCategories,
+        coords: coords,
+        state: targetState })
     );
   } else {
     return _react2.default.createElement(
@@ -67342,6 +67350,33 @@ var Home = function Home(props) {
 };
 
 exports.default = Home;
+
+/***/ }),
+/* 897 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header(props) {
+  return _react2.default.createElement(
+    "div",
+    { className: "header" },
+    _react2.default.createElement(Image, null)
+  );
+};
+
+exports.default = Header;
 
 /***/ })
 /******/ ]);

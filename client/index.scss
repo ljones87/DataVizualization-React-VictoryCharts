@@ -44,6 +44,12 @@ html, body {
 
 .intro {
   @include chartArea();
+}
+
+.header {
+  height: 10%;
+  width: 100%;
+  border-bottom-color: black;
 
 }
 

@@ -7,6 +7,8 @@ To start using me, here's what you'll have to do:
 * `npm install`
 * `npm start`
 
-Feel free to fork, clone, npm install & start to see current progress
+Feel free to fork, clone, npm install & start to see current progress.
+
+Live link availble here: https://us-state-emissions-history.herokuapp.com/
 
 The start script runs webpack in watch mode, and nodemon, so any changes you make to the client or server directories should cause webpack to rebuild and the server to restart, respectively.
