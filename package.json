@@ -24,7 +24,10 @@
     "victory": "^0.21.3"
   },
   "scripts": {
-    "start": "node server/app.js",
+    "start": "node server",
+    "build-client": "webpack",
+    "build-client-watch": "webpack -w",
+    "start-dev": "npm run build-client-watch",
     "deploy": "git pull heroku master && webpack -p && git add -f public/bundle.js && git commit --allow-empty -m 'Deploying' && git push heroku deploy:master"
   },
   "devDependencies": {
