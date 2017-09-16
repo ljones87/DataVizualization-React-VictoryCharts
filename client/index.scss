@@ -36,12 +36,12 @@ html, body {
   float: left;
   width: 65%;
   padding-left: 3em;
+  margin-left: 5em;
   padding-right: 3em;
 }
-.chartArea {
+.chart {
   @include chartArea();
   padding-left: 3em;
-
 }
 
 .intro {
