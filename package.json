@@ -27,7 +27,8 @@
     "start": "node server/app.js",
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
-    "start-dev": "npm run build-client-watch",
+    "start-dev": "npm run build-client-watch && npm run start-server",
+    "start-server": "nodemon server/app.js",
     "deploy": "git pull heroku master && webpack -p && git add -f public/bundle.js && git commit --allow-empty -m 'Deploying' && git push heroku deploy:master"
   },
   "devDependencies": {
