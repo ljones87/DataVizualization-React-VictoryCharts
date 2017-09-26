@@ -67386,7 +67386,9 @@ var Header = function Header(props) {
     { className: 'header' },
     _react2.default.createElement(
       'a',
-      { href: 'https://github.com/ljones87/DataVizualization-D3-VictoryCharts' },
+      { href: 'https://github.com/ljones87/DataVizualization-D3-VictoryCharts',
+        rel: 'noopener noreferrer',
+        target: '_blank' },
       _react2.default.createElement('img', { className: 'git', src: 'GitHub-Mark-120px-plus.png' })
     )
   );
