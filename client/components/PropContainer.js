@@ -4,7 +4,7 @@ import { fetchStateData } from '../store';
 import YearChartFormattingContainer from './YearChartFormattingContainer';
 import StateChartFormattingContainer from './StateChartFormattingContainer';
 
-class PropsRetreiver extends React.Component {
+class PropsRetriever extends React.Component {
 
   componentDidMount() {
     this.props.fetchDataThunk();
@@ -43,4 +43,4 @@ class PropsRetreiver extends React.Component {
   };
 
 
-  export default connect(mapState, mapDispatch)(PropsRetreiver);
+  export default connect(mapState, mapDispatch)(PropsRetriever);
